@@ -15,9 +15,11 @@ function Application() {
 Application.prototype = {
     
 	run: function() {
-		var that = this;
-		that.openExternalInAppBrowser;
+		var that = this,
+		openPage = document.getElementById("openPage");
+		openPage.addEventListener("click", that.openExternalInAppBrowser);
 /*
+		that.openExternalInAppBrowser();
 		var that = this,
 		openLocal = document.getElementById("openLocal"),
 		openExternalInAppBrowser = document.getElementById("openExternalInAppBrowser"),
